@@ -32,7 +32,7 @@ public class ProductServiceImpl implements ProductService {
 	 */
 	@Override
 	public List<Products> getAllProducts() {
-		log.info("Getting all the product");
+		log.debug("Getting all the product");
 		return (List<Products>)productRepository.findAll();
 	}
 
@@ -47,20 +47,32 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Products createProduct(@Valid Products product) {
-		// TODO Auto-generated method stub
+		
 		return productRepository.save(product);
 	}
 
 	@Override
 	public void deleteProduct(String productId) {
-		// TODO Auto-generated method stub
+		
 		productRepository.deleteById(productId);
 	}
 
 	@Override
 	public Products updateProduct(@Valid Products product) {
-		// TODO Auto-generated method stub
+		
 		return productRepository.save(product);
+	}
+
+	@Override
+	public List<Products> eligibleProductsBySubCategory(String subCategory) {
+		// TODO Auto-generated method stub
+		return productRepository.findBySubCategory(subCategory);
+	}
+
+	@Override
+	public List<Products> eligibleProductsByCategory(String category) {
+		// TODO Auto-generated method stub
+		return productRepository.findByCategory(category);
 	}
 
 	

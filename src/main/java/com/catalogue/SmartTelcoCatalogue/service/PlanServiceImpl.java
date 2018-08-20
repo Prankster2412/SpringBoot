@@ -20,57 +20,56 @@ import com.catalogue.SmartTelcoCatalogue.repository.PlanRepository;
  */
 @Service
 public class PlanServiceImpl implements PlanService {
-	
+
 	@Autowired
 	PlanRepository planRepository;
 
 	@Override
 	public List<Plans> getAllPlans() {
-		// TODO Auto-generated method stub
-		return (List<Plans>) planRepository.findAll();
+		final List<Plans> allPlans = (List<Plans>) planRepository.findAll();
+		return allPlans;
 	}
 
 	@Override
 	public Optional<Plans> getPlan(String productId) {
-		// TODO Auto-generated method stub
-		return planRepository.findById(productId);
+		final Optional<Plans> plan = planRepository.findById(productId);
+		return plan;
 	}
 
 	@Override
 	public Plans createPlan(@Valid Plans plan) {
-		
-		return planRepository.save(plan);
+		final Plans newPlan = planRepository.save(plan);
+		return newPlan;
 	}
 
 	@Override
 	public Plans updatePlan(@Valid Plans plan) {
-		// TODO Auto-generated method stub
-		return planRepository.save(plan);
+		final Plans updatedPlan = planRepository.save(plan);
+		return updatedPlan;
 	}
 
 	@Override
 	public void deletePlan(String productId) {
-		// TODO Auto-generated method stub
+
 		planRepository.deleteById(productId);
 	}
 
 	@Override
 	public List<Plans> eligiblePlanByRegion(String region) {
-		// TODO Auto-generated method stub
-		return planRepository.findByRegions(region);
+		final List<Plans> planByRegion = planRepository.findByRegions(region);
+		return planByRegion;
 	}
 
 	@Override
 	public List<Plans> eligiblePlanBySubCategory(String subCategory) {
-		// TODO Auto-generated method stub
-		return planRepository.findBySubCategory(subCategory);
+		final List<Plans> planBySubCategory = planRepository.findBySubCategory(subCategory);
+		return planBySubCategory;
 	}
 
 	@Override
 	public List<Plans> eligiblePlanByCategory(String category) {
-		// TODO Auto-generated method stub
-		return planRepository.findByCategory(category);
+		final List<Plans> planByCategory = planRepository.findByCategory(category);
+		return planByCategory;
 	}
-	
-	
+
 }

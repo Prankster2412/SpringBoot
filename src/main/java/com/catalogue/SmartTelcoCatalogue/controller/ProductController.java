@@ -68,4 +68,16 @@ public class ProductController {
 	public void deleteProduct(@PathVariable(value = "productId") String productId) {
 		productService.deleteProduct(productId);
 	}
+	
+	@GetMapping("/eligibleProductsBySubCategory/{subCategory}")
+	public List<Products> eligibleProductsBySubCategory(@PathVariable(value = "subCategory") String subCategory) {
+		return productService.eligibleProductsBySubCategory(subCategory);
+		
+	}
+	
+	@GetMapping("/eligibleProductsByCategory/{category}")
+	public List<Products> eligibleProductsByCategory(@PathVariable(value = "category") String category) {
+		return productService.eligibleProductsByCategory(category);
+		
+	}
 }

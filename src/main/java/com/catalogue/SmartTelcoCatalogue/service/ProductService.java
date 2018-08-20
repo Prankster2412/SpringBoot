@@ -26,6 +26,10 @@ public interface ProductService {
 	public void deleteProduct(String productId);
 
 	public Products updateProduct(@Valid Products product);
+
+	public List<Products> eligibleProductsBySubCategory(String subCategory);
+
+	public List<Products> eligibleProductsByCategory(String category);
 	
 
 }

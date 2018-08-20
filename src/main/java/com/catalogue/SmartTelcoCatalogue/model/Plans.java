@@ -197,7 +197,7 @@ public class Plans {
 	}
 	
 	public Plans(String productId,String productName,String shortDesc,String longDesc,float unitPrice,float retailPrice,
-			String category,String region,String dimensions,
+			String category,String subCategory,String region,String dimensions,
 			Date createTs,Date modifyTs,String createProgId,String modifyProgId) {
 			super();
 			this.productId=productId;
@@ -207,6 +207,7 @@ public class Plans {
 			this.unitPrice=unitPrice;
 			this.retailPrice=retailPrice;
 			this.category=category;
+			this.subCategory=subCategory;
 			this.regions=region;
 			this.createTs=createTs;
 			this.modifyTs=modifyTs;
