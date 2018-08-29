@@ -5,7 +5,7 @@ There will be 2 tables that will be automatically created when you start up the 
 1. PLANS - this table will hold all the plans(post paid, pre paid, voice, sms , 3G/4G etc..)
 2. PRODUCTS - this table will hold all the products(smartphone, dongles, warranty, subscriptions)
 
-##Sample Create Plan Json
+## Sample Create Plan Json
 {
     "productId": "200-1004",
     "productName": "499 prepaid plan",
@@ -22,7 +22,7 @@ There will be 2 tables that will be automatically created when you start up the 
     "modifyProgId": ""
 }
 
-##Sample Create Product Json
+## Sample Create Product Json
 
 {
     "productId": "100-1001",
