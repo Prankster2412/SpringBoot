@@ -2,5 +2,10 @@ spring:
   application:
     name: telcosmart-catalogue
     
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9091/eureka
+    
 
    
